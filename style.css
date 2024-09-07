@@ -12,6 +12,12 @@ header {
     color: white;
 }
 
+.profile-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+}
+
 section {
     margin: 20px;
     padding: 20px;
@@ -32,3 +38,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
