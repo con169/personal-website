@@ -21,6 +21,11 @@ header {
     object-fit: cover;
 }
 
+.social-links img {
+    width: 30px;  /* Adjust the width */
+    height: 30px; /* Adjust the height to match */
+}
+
 section {
     margin: 20px;
     padding: 20px;
