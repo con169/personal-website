@@ -14,7 +14,8 @@ header {
 
 .profile-pic {
     width: 150px;
-    height: auto;
+    height: 150px;
+    /* object-fit: cover; */
     border-radius: 50%; /* Circular image */
 }
 
