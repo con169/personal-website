@@ -47,3 +47,26 @@ footer {
     bottom: 0;
 }
 
+/* Skill bar container */
+.skill-bar {
+    background-color: #e0e0e0;   /* Light gray background */
+    border-radius: 10px;         /* Rounded corners */
+    width: 100%;                 /* Full width of the container */
+    height: 20px;                /* Bar height */
+    margin: 10px 0;              /* Space between skill bars */
+    overflow: hidden;            /* Prevents inner bar from overflowing */
+}
+
+/* The skill level bar inside the container */
+.skill-level {
+    background-color: #3498db;   /* C++ skill bar color (blue) */
+    height: 100%;                /* Full height of the bar */
+    border-radius: 10px 0 0 10px;/* Rounded corners on the left */
+    transition: width 0.4s ease; /* Smooth transition effect */
+}
+
+/* Text label for the skill */
+.skill span {
+    font-size: 16px;
+    font-weight: bold;
+}
