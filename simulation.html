@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Physics Simulation: Projectile Motion</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <title>Physics Simulation: Wave Interference</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> <!-- p5.js Library -->
     <style>
       body {
         display: flex;
@@ -20,44 +20,39 @@
 </head>
 <body>
     <script>
-      let x = 0;
-      let y = 0;
-      let vx = 5; // Velocity in the x direction
-      let vy = -15; // Initial velocity in the y direction
-      let g = 0.5; // Gravity
+      let A1 = 50;   // Amplitude of wave 1
+      let A2 = 50;   // Amplitude of wave 2
+      let k1 = 0.1;  // Wave number of wave 1
+      let k2 = 0.1;  // Wave number of wave 2
+      let omega1 = 0.05;  // Angular frequency of wave 1
+      let omega2 = 0.05;  // Angular frequency of wave 2
+      let phase1 = 0;     // Phase of wave 1
+      let phase2 = Math.PI / 2; // Phase of wave 2
 
       function setup() {
-        createCanvas(600, 400);
-        x = 50;
-        y = height - 50;
+        createCanvas(800, 400);
       }
 
       function draw() {
         background(220);
-        
-        // Update position
-        x += vx;
-        y += vy;
-        
-        // Apply gravity
-        vy += g;
-        
-        // Bounce off the ground
-        if (y > height - 50) {
-          y = height - 50;
-          vy *= -0.8; // Reduce velocity to simulate energy loss
+        stroke(0);
+        noFill();
+        translate(0, height / 2); // Shift the wave to the middle of the canvas
+
+        beginShape();
+        for (let x = 0; x < width; x++) {
+          let t = frameCount / 10;
+
+          // Calculate wave 1 and wave 2
+          let y1 = A1 * sin(k1 * x - omega1 * t + phase1);
+          let y2 = A2 * sin(k2 * x - omega2 * t + phase2);
+
+          // Total displacement due to superposition
+          let yTotal = y1 + y2;
+
+          vertex(x, yTotal);
         }
-        
-        // Draw the ball
-        fill(255, 0, 0);
-        ellipse(x, y, 50, 50);
-        
-        // Reset if it goes off screen
-        if (x > width) {
-          x = 50;
-          y = height - 50;
-          vy = -15;
-        }
+        endShape();
       }
     </script>
 </body>
