@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Physics Simulation: Wave Interference</title>
+    <title>Interactive Wave Interference</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> <!-- p5.js Library -->
     <style>
       body {
@@ -10,44 +10,95 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
         margin: 0;
         background-color: #f4f4f4;
       }
       canvas {
         border: 1px solid black;
       }
+      .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .slider {
+        margin: 5px;
+      }
     </style>
 </head>
 <body>
+
+    <div class="controls">
+        <!-- Controls for Amplitude, Frequency, and Phase -->
+        <div>
+            <label for="amplitude1">Amplitude of Wave 1</label>
+            <input class="slider" type="range" id="amplitude1" min="0" max="100" value="50">
+        </div>
+        <div>
+            <label for="frequency1">Frequency of Wave 1</label>
+            <input class="slider" type="range" id="frequency1" min="0.01" max="0.2" value="0.05" step="0.01">
+        </div>
+        <div>
+            <label for="phase1">Phase of Wave 1</label>
+            <input class="slider" type="range" id="phase1" min="0" max="6.28" value="0" step="0.01">
+        </div>
+
+        <div>
+            <label for="amplitude2">Amplitude of Wave 2</label>
+            <input class="slider" type="range" id="amplitude2" min="0" max="100" value="50">
+        </div>
+        <div>
+            <label for="frequency2">Frequency of Wave 2</label>
+            <input class="slider" type="range" id="frequency2" min="0.01" max="0.2" value="0.05" step="0.01">
+        </div>
+        <div>
+            <label for="phase2">Phase of Wave 2</label>
+            <input class="slider" type="range" id="phase2" min="0" max="6.28" value="1.57" step="0.01">
+        </div>
+    </div>
+
     <script>
-      let A1 = 50;   // Amplitude of wave 1
-      let A2 = 50;   // Amplitude of wave 2
-      let k1 = 0.1;  // Wave number of wave 1
-      let k2 = 0.1;  // Wave number of wave 2
-      let omega1 = 0.05;  // Angular frequency of wave 1
-      let omega2 = 0.05;  // Angular frequency of wave 2
-      let phase1 = 0;     // Phase of wave 1
-      let phase2 = Math.PI / 2; // Phase of wave 2
+      // Variables for wave parameters
+      let A1, A2, omega1, omega2, phase1, phase2;
+      let k = 0.1;  // Constant wave number for simplicity
 
       function setup() {
         createCanvas(800, 400);
+
+        // Initialize sliders
+        A1Slider = select('#amplitude1');
+        omega1Slider = select('#frequency1');
+        phase1Slider = select('#phase1');
+        A2Slider = select('#amplitude2');
+        omega2Slider = select('#frequency2');
+        phase2Slider = select('#phase2');
       }
 
       function draw() {
         background(220);
         stroke(0);
         noFill();
-        translate(0, height / 2); // Shift the wave to the middle of the canvas
+        translate(0, height / 2);  // Move the wave to the middle of the canvas
+
+        // Get values from sliders
+        A1 = A1Slider.value();
+        A2 = A2Slider.value();
+        omega1 = omega1Slider.value();
+        omega2 = omega2Slider.value();
+        phase1 = phase1Slider.value();
+        phase2 = phase2Slider.value();
 
         beginShape();
         for (let x = 0; x < width; x++) {
           let t = frameCount / 10;
 
-          // Calculate wave 1 and wave 2
-          let y1 = A1 * sin(k1 * x - omega1 * t + phase1);
-          let y2 = A2 * sin(k2 * x - omega2 * t + phase2);
+          // Calculate the two waves
+          let y1 = A1 * sin(k * x - omega1 * t + float(phase1));
+          let y2 = A2 * sin(k * x - omega2 * t + float(phase2));
 
-          // Total displacement due to superposition
+          // Sum of the two waves (superposition)
           let yTotal = y1 + y2;
 
           vertex(x, yTotal);
