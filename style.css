@@ -36,8 +36,14 @@ header {
 .menu-links {
     display: none;
     background-color: #333;
+    position: absolute;
+    top: 50px; /* positioned right below hamburger icon */
+    right: 15px;
+    width: 200px; /* adjust width as needed */
+    z-index: 1000; /* ensure it overlaps other elements */
     text-align: right;
     padding: 15px;
+    border-radius: 5px;
 }
 
 .menu-links a {
