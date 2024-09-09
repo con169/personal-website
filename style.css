@@ -51,15 +51,15 @@ header {
     
 .menu-links {
     display: none;
-    background-color: #333;
-    position: fixed;
-    top: 50px; /* positioned right below hamburger icon */
-    right: 0;
-    width: 100%; /* adjust width as needed */
-    z-index: 1000; /* ensure it overlaps other elements */
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;  /* Appears below the icon */
+    top: 50px;  /* Positioned below the hamburger icon */
+    right: 15px;  /* Aligns with the right side of the icon */
+    width: 200px;  /* A more compact width */
+    padding: 15px;
+    border-radius: 5px;  /* Rounded corners */
+    z-index: 1000;
     text-align: center;
-    padding: 20px 0;
-    border-radius: 5px;
 }
 
 .menu-links a {
