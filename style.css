@@ -50,7 +50,7 @@ header {
     
 .menu-links {
     display: none;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;  /* Appears below the icon */
     top: 50px;  /* Positioned below the hamburger icon */
     right: 15px;  /* Aligns with the right side of the icon */
