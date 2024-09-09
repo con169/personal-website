@@ -82,13 +82,14 @@ h2 {
 }
 
 footer {
-    text-align: center;
-    padding: 5px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #333; /* Matches the background color */
+    color: white;           /* Footer text color */
+    padding: 20px;
+    display: flex;          /* Flexbox for centering */
+    flex-direction: column; /* Column direction for vertical alignment */
+    align-items: center;    /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    height: 200px;          /* Adjust height to fit content and donut */
 }
 
 #donut-container 
