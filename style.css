@@ -42,7 +42,7 @@ header {
     color: #3498db;
     cursor: pointer;
     display: block;
-    position: fixed;
+    position: relative;
     top: 15px;
     right: 15px;
     z-index: 1001;
@@ -51,7 +51,7 @@ header {
 .menu-links {
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;  /* Appears below the icon */
+    position: relative;  /* Appears below the icon */
     top: 50px;  /* Positioned below the hamburger icon */
     right: 15px;  /* Aligns with the right side of the icon */
     width: 200px;  /* A more compact width */
