@@ -17,6 +17,9 @@
       }
       canvas {
         border: 1px solid black;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
       }
       .controls {
         display: flex;
@@ -66,7 +69,7 @@
       let k = 0.1;  // Constant wave number for simplicity
 
       function setup() {
-        createCanvas(800, 400);
+        createCanvas(windowWidth * .9, windowHeight * .4);
 
         // Initialize sliders
         A1Slider = select('#amplitude1');
@@ -105,6 +108,11 @@
           vertex(x, yTotal);
         }
         endShape();
+      }
+
+      function windowResized()
+      {
+        resizeCanvas(windowWidth * .9, windowHeight * .4);
       }
     </script>
 </body>
