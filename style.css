@@ -29,7 +29,10 @@ header {
     object-fit: cover;
 }
 
-
+.social-links img {
+    width: 30px;  /* Adjust the width */
+    height: 30px; /* Adjust the height to match */
+}
 
 /* Hidden menu by default */
 @media only screen and (max-width: 768px) {
@@ -73,9 +76,31 @@ header {
 
 }
 
-.social-links img {
-    width: 30px;  /* Adjust the width */
-    height: 30px; /* Adjust the height to match */
+/* Show Full Menu on PC */
+@media only screen and (min-width: 769px) {
+    .menu-icon {
+        display: none;  /* Hide hamburger icon on larger screens */
+    }
+
+    .menu-links {
+        display: flex;  /* Show full menu as a horizontal bar */
+        justify-content: flex-end;
+        background-color: #333;
+        width: 100%;
+        position: relative;  /* Normal positioning */
+        padding: 10px;
+    }
+
+    .menu-links a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .menu-links a:hover {
+        background-color: #575757;
+    }
 }
 
 section {
