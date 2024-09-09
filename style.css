@@ -44,7 +44,7 @@ header {
 .menu-links {
     display: none;
     background-color: transparent;
-    position: relative;
+    position: fixed;
     top: 50px; /* positioned right below hamburger icon */
     right: 15px;
     width: 200px; /* adjust width as needed */
@@ -55,10 +55,11 @@ header {
 }
 
 .menu-links a {
-    display: block;
-    color: #3498db;
-    padding: 12px;
-    text-decoration: none;
+    display: block;         /* Makes links block-level so they stack vertically */
+    color: #3498db;         /* Sets text color */
+    padding: 10px 0;        /* Adds padding for clickable area */
+    text-decoration: none;  /* Removes underline */
+    text-align: center;     /* Centers text if needed */
 }
 
 .menu-links a:hover {
