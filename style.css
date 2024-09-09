@@ -41,36 +41,32 @@ header {
         color: #3498db;
         cursor: pointer;
         display: block;
-        position: fixed;  /* Will scroll with the page, relative to the parent container */
+        position: fixed;  /* Stays fixed at the top-right corner */
         top: 15px;
-        right: 15px;
-        z-index: 1001;  /* Ensures it stays on top of other content */
+        right: 15px;  /* Aligns to the right side of the screen */
+        z-index: 1001;  /* Keeps it above other content */
     }
     
     .menu-links {
-        display: none;  /* Hidden by default */
-        background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-        position: fixed;  /* Menu links positioned relative to the icon */
-        top: 50px;  /* Positioned below the hamburger icon */
+        position: fixed;  /* Fixes the menu so it overlays other content */
+        top: 60px;  /* Adjust position below the hamburger icon */
         right: 15px;
-        width: 200px;  /* Compact width */
+        width: 200px;
         padding: 15px;
+        background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparent background */
         border-radius: 5px;
         z-index: 1000;
         text-align: right;
+        visibility: hidden;  /* Initially hidden */
+        opacity: 0;  /* Initially transparent */
+        transition: visibility 0s, opacity 0.3s ease-in-out;  /* Smooth transition */
     }
-
-    .menu-links a {
-        display: block;  /* Makes links block-level so they stack vertically */
-        color: #3498db;  /* Sets text color */
-        padding: 10px 0;  /* Adds padding for clickable area */
-        text-decoration: none;  /* Removes underline */
-        font-size: 18px;
+    
+    .menu-links.active {
+        visibility: visible;  /* Show menu */
+        opacity: 1;  /* Fade in */
     }
-
-    .menu-links a:hover {
-        background-color: #575757;  /* Darken background on hover */
-    }
+    
 }
 
 
