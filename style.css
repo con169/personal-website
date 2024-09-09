@@ -41,7 +41,7 @@ header {
         color: #3498db;
         cursor: pointer;
         display: block;
-        position: absolute;  /* Will scroll with the page, relative to the parent container */
+        position: fixed;  /* Will scroll with the page, relative to the parent container */
         top: 15px;
         right: 15px;
         z-index: 1001;  /* Ensures it stays on top of other content */
@@ -50,7 +50,7 @@ header {
     .menu-links {
         display: none;  /* Hidden by default */
         background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-        position: absolute;  /* Menu links positioned relative to the icon */
+        position: fixed;  /* Menu links positioned relative to the icon */
         top: 50px;  /* Positioned below the hamburger icon */
         right: 15px;
         width: 200px;  /* Compact width */
