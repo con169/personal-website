@@ -35,7 +35,7 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
 
-            const geometry = new THREE.TorusGeometry(2.2, 0.8, 16, 100);
+            const geometry = new THREE.TorusGeometry(2.1, 0.8, 16, 100);
             const material = new THREE.MeshBasicMaterial({ color: 0xff6347, wireframe: true });
             donut = new THREE.Mesh(geometry, material);
             scene.add(donut);
