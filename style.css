@@ -82,24 +82,21 @@ h2 {
 }
 
 footer {
-    display: flex;
-    justify-content: space-between; /* Aligns the text and donut */
-    align-items: center; /* Vertically centers them */
-    background-color: #f4f4f4; /* The color of your footer */
-    padding: 10px;
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#donut-container 
+{
+    width: 50px;
+    height: 50px;
     position: relative;
-    z-index: 1; /* Ensures it's above other elements */
 }
-
-#donut-container {
-    width: 50px;  /* Adjust size of the donut */
-    height: 50px; /* Adjust size of the donut */
-}
-
-footer p {
-    margin: 0;
-}
-
 
 /* Skill bar container */
 .skill-bar {
