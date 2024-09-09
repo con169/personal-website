@@ -51,7 +51,7 @@ header {
 .menu-links {
     display: none;
     background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;  /* Appears below the icon */
+    position: fixed;  /* Appears below the icon */
     top: 50px;  /* Positioned below the hamburger icon */
     right: 15px;  /* Aligns with the right side of the icon */
     width: 200px;  /* A more compact width */
