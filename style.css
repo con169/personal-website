@@ -114,3 +114,13 @@ footer {
     font-size: 16px;
     font-weight: bold;
 }
+
+#donut-container {
+    position: absolute;
+    bottom: 10px; /* 10px above the bottom */
+    right: 10px;  /* 10px from the right */
+    width: 150px;
+    height: 150px;
+    pointer-events: none; /* Ensure the donut doesn't interfere with footer interactions */
+    z-index: 1000; /* Keep it above other elements */
+}
