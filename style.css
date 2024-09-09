@@ -36,7 +36,6 @@ header {
 
 /* Hidden menu by default */
 @media only screen and (max-width: 768px) {
-
 /* Hamburger Menu Styling */
 .menu-icon {
     font-size: 30px;
@@ -51,7 +50,7 @@ header {
     
 .menu-links {
     display: none;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;  /* Appears below the icon */
     top: 50px;  /* Positioned below the hamburger icon */
     right: 15px;  /* Aligns with the right side of the icon */
