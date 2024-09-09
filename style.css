@@ -58,7 +58,7 @@ header {
     padding: 15px;
     border-radius: 5px;  /* Rounded corners */
     z-index: 1000;
-    text-align: center;
+    text-align: right;
 }
 
 .menu-links a {
