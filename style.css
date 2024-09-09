@@ -32,7 +32,7 @@ header {
 /* Hamburger Menu Styling */
 .menu-icon {
     font-size: 30px;
-    color: white;
+    color: #3498db;
     cursor: pointer;
     display: block;
     position: fixed;
