@@ -82,14 +82,17 @@ h2 {
 }
 
 footer {
-    background-color: #333; /* Matches the background color */
-    color: white;           /* Footer text color */
+    background-color: #333; /* Dark gray background */
+    color: white;           /* Text color */
     padding: 20px;
-    display: flex;          /* Flexbox for centering */
-    flex-direction: column; /* Column direction for vertical alignment */
-    align-items: center;    /* Centers horizontally */
-    justify-content: center; /* Centers vertically */
-    height: 200px;          /* Adjust height to fit content and donut */
+    position: fixed;        /* Fixes the footer to the bottom of the screen */
+    bottom: 0;              /* Aligns the footer at the bottom */
+    left: 0;                /* Ensures the footer spans the full width */
+    width: 100%;
+    display: flex;          /* Flexbox to center elements */
+    flex-direction: column;
+    align-items: center;    /* Centers the donut and text horizontally */
+    z-index: 1000;          /* Ensures the footer stays above other content */
 }
 
 #donut-container 
