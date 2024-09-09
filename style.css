@@ -43,7 +43,7 @@ header {
 /* Hidden menu by default */
 .menu-links {
     display: none;
-    background-color: #333;
+    background-color: transparent;
     position: absolute;
     top: 50px; /* positioned right below hamburger icon */
     right: 15px;
