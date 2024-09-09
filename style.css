@@ -34,46 +34,45 @@ header {
     height: 30px; /* Adjust the height to match */
 }
 
-/* Hidden menu by default */
 @media only screen and (max-width: 768px) {
-/* Hamburger Menu Styling */
-.menu-icon {
-    font-size: 30px;
-    color: #3498db;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    top: 15px;
-    right: 15px;
-    z-index: 1001;
-}
+    /* Hamburger Menu Styling */
+    .menu-icon {
+        font-size: 30px;
+        color: #3498db;
+        cursor: pointer;
+        display: block;
+        position: absolute;  /* Will scroll with the page, relative to the parent container */
+        top: 15px;
+        right: 15px;
+        z-index: 1001;  /* Ensures it stays on top of other content */
+    }
     
-.menu-links {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;  /* Appears below the icon */
-    top: 50px;  /* Positioned below the hamburger icon */
-    right: 15px;  /* Aligns with the right side of the icon */
-    width: 200px;  /* A more compact width */
-    padding: 15px;
-    border-radius: 5px;  /* Rounded corners */
-    z-index: 1000;
-    text-align: right;
+    .menu-links {
+        display: none;  /* Hidden by default */
+        background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+        position: absolute;  /* Menu links positioned relative to the icon */
+        top: 50px;  /* Positioned below the hamburger icon */
+        right: 15px;
+        width: 200px;  /* Compact width */
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 1000;
+        text-align: right;
+    }
+
+    .menu-links a {
+        display: block;  /* Makes links block-level so they stack vertically */
+        color: #3498db;  /* Sets text color */
+        padding: 10px 0;  /* Adds padding for clickable area */
+        text-decoration: none;  /* Removes underline */
+        font-size: 18px;
+    }
+
+    .menu-links a:hover {
+        background-color: #575757;  /* Darken background on hover */
+    }
 }
 
-.menu-links a {
-    display: block;         /* Makes links block-level so they stack vertically */
-    color: #3498db;         /* Sets text color */
-    padding: 10px 0;        /* Adds padding for clickable area */
-    text-decoration: none;  /* Removes underline */
-    font-size: 18px;
-}
-
-.menu-links a:hover {
-    background-color: #575757;
-}
-
-}
 
 /* Show Full Menu on PC */
 @media only screen and (min-width: 769px) {
