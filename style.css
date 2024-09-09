@@ -82,14 +82,24 @@ h2 {
 }
 
 footer {
-    text-align: center;
-    padding: 5px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    display: flex;
+    justify-content: space-between; /* Aligns the text and donut */
+    align-items: center; /* Vertically centers them */
+    background-color: #f4f4f4; /* The color of your footer */
+    padding: 10px;
+    position: relative;
+    z-index: 1; /* Ensures it's above other elements */
 }
+
+#donut-container {
+    width: 50px;  /* Adjust size of the donut */
+    height: 50px; /* Adjust size of the donut */
+}
+
+footer p {
+    margin: 0;
+}
+
 
 /* Skill bar container */
 .skill-bar {
@@ -115,12 +125,3 @@ footer {
     font-weight: bold;
 }
 
-#donut-container {
-    position: absolute;
-    bottom: 10px; /* 10px above the bottom */
-    right: 10px;  /* 10px from the right */
-    width: 150px;
-    height: 150px;
-    pointer-events: none; /* Ensure the donut doesn't interfere with footer interactions */
-    z-index: 1000; /* Keep it above other elements */
-}
