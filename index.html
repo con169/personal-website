@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connor Auyong portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Connor Auyong</h1>
         <img class="profile-pic" src="images/Profile_Picture.jpg" alt="profile picture">
         <p>Hello! I am a CSE student at UCI, and this is my personal website/portfolio</p>
-
-        <!-- Hamburger menu icon -->
-         <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
 
         <!-- Social Links Bar -->
         <div class="social-links">
@@ -28,8 +28,11 @@
                 <img src="icons/gmail_icon.png" alt="Email">
             </a>
         </div>
+    </header>
 
-        <!-- Navigation Links (initially hidden) -->
+    <!-- Hamburger menu icon -->
+    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    <!-- Navigation Links (initially hidden) -->
     <nav id="menuLinks" class="menu-links">
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
@@ -38,15 +41,12 @@
         <a href="#achievements">Achievements</a>
     </nav>
 
-    </header>
-
-
-
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a Computer Science and Engineering student that is passionate about 
-        engineering, software development, embedded software, and machine learning! With hands-on experience with embedded software and
-        strong C++ foundations, I'm excited to tackle complex problems and find efficient solutions.</p>
+        <p>I am a Computer Science and Engineering student that is passionate about
+            engineering, software development, embedded software, and machine learning! With hands-on experience with
+            embedded software and
+            strong C++ foundations, I'm excited to tackle complex problems and find efficient solutions.</p>
     </section>
 
     <section id="projects">
@@ -97,7 +97,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <section id="resumes">
         <h2>Resume</h2>
@@ -110,18 +110,18 @@
             <li>AWS Certified Cloud Practitioner</li>
         </ul>
     </section>
-    
+
 
     <footer>
         <p>&copy; 2024 Connor Auyong</p>
 
         <!-- Donut container -->
-    <div id="donut-container">
-        <iframe src="donut.html" style="width: 100%; height: 100%; border: none;"></iframe>
-    </div>
+        <div id="donut-container">
+            <iframe src="donut.html" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
     </footer>
 
-    
+
 
     <script>
         function toggleMenu() {
@@ -133,6 +133,7 @@
             }
         }
     </script>
-    
+
 </body>
+
 </html>
