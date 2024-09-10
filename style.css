@@ -67,6 +67,17 @@ header {
         opacity: 1;  /* Fade in */
     }
     
+    .menu-links a {
+        display: block;  /* Makes links stack vertically */
+        color: #3498db;  /* Sets text color */
+        padding: 10px 0;  /* Adds spacing around the links */
+        text-decoration: none;  /* Removes underline */
+        font-size: 18px;
+    }
+    
+    .menu-links a:hover {
+        background-color: #575757;  /* Changes background color on hover */
+    }
 }
 
 
