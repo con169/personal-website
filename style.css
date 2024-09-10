@@ -60,13 +60,15 @@ header {
         visibility: hidden;  /* Initially hidden */
         opacity: 0;  /* Initially transparent */
         transition: visibility 0s, opacity 0.3s ease-in-out;  /* Smooth transition */
+        width: auto;
+        white-space: nowrap;
     }
     
     .menu-links.active {
         visibility: visible;  /* Show menu */
         opacity: 1;  /* Fade in */
     }
-    
+
     .menu-links a {
         display: block;  /* Makes links stack vertically */
         color: #3498db;  /* Sets text color */
